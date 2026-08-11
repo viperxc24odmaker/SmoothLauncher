@@ -1,0 +1,277 @@
+/**
+ * MakeForge Launcher Theme
+ * Warm, modern, pixel-inspired aesthetic
+ */
+
+:root {
+    /* Primary Colors */
+    --mf-primary: #ff8c42;
+    --mf-primary-light: #ffa85a;
+    --mf-primary-dark: #e67e38;
+    
+    /* Accent Colors */
+    --mf-accent: #ffc857;
+    --mf-accent-light: #ffe6a0;
+    
+    /* Dark Theme */
+    --mf-dark: #1a1a2e;
+    --mf-dark-secondary: #16213e;
+    --mf-dark-tertiary: #0f3460;
+    
+    /* Neutrals */
+    --mf-cream: #f5f1ed;
+    --mf-cream-dark: #ebe3db;
+    --mf-gray: #a5a5a5;
+    
+    /* Status Colors */
+    --mf-success: #2ecc71;
+    --mf-warning: #f39c12;
+    --mf-danger: #e74c3c;
+    --mf-info: #3498db;
+    
+    /* Shadows */
+    --mf-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --mf-shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.2);
+    --mf-shadow-inner: inset 0 2px 4px rgba(0, 0, 0, 0.06);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+                 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica',
+                 'Arial', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background: linear-gradient(135deg, var(--mf-dark) 0%, var(--mf-dark-secondary) 100%);
+    color: var(--mf-cream);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* Text Styles */
+h1, h2, h3, h4, h5, h6 {
+    color: var(--mf-cream);
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
+p {
+    color: var(--mf-gray);
+    margin-bottom: 1rem;
+}
+
+a {
+    color: var(--mf-primary);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+a:hover {
+    color: var(--mf-primary-light);
+}
+
+/* Buttons */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 0.375rem;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+    user-select: none;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, var(--mf-primary), var(--mf-primary-dark));
+    color: white;
+    box-shadow: var(--mf-shadow);
+}
+
+.btn-primary:hover {
+    background: linear-gradient(135deg, var(--mf-primary-light), var(--mf-primary));
+    box-shadow: var(--mf-shadow-lg);
+    transform: translateY(-2px);
+}
+
+.btn-primary:active {
+    transform: translateY(0);
+}
+
+.btn-secondary {
+    background: var(--mf-dark-tertiary);
+    color: var(--mf-cream);
+    border: 1px solid var(--mf-primary);
+}
+
+.btn-secondary:hover {
+    background: var(--mf-dark-secondary);
+    border-color: var(--mf-primary-light);
+}
+
+.btn-ghost {
+    background: transparent;
+    color: var(--mf-primary);
+    border: 1px solid var(--mf-primary);
+}
+
+.btn-ghost:hover {
+    background: rgba(255, 140, 66, 0.1);
+}
+
+.btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* Input Fields */
+input[type="text"],
+input[type="password"],
+input[type="email"],
+select,
+textarea {
+    display: block;
+    width: 100%;
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    background: var(--mf-dark-secondary);
+    border: 1px solid var(--mf-dark-tertiary);
+    border-radius: 0.375rem;
+    color: var(--mf-cream);
+    font-family: inherit;
+    transition: border-color 0.2s ease;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="email"]:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: var(--mf-primary);
+    box-shadow: 0 0 0 3px rgba(255, 140, 66, 0.1);
+}
+
+input::placeholder {
+    color: var(--mf-gray);
+}
+
+/* Cards */
+.card {
+    background: var(--mf-dark-secondary);
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    box-shadow: var(--mf-shadow);
+    border: 1px solid var(--mf-dark-tertiary);
+}
+
+.card:hover {
+    box-shadow: var(--mf-shadow-lg);
+    border-color: var(--mf-primary);
+}
+
+/* Badges */
+.badge {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+    font-size: 0.875rem;
+    font-weight: 500;
+    background: var(--mf-dark-tertiary);
+    color: var(--mf-cream);
+}
+
+.badge-success {
+    background: rgba(46, 204, 113, 0.2);
+    color: var(--mf-success);
+}
+
+.badge-warning {
+    background: rgba(243, 156, 18, 0.2);
+    color: var(--mf-warning);
+}
+
+.badge-danger {
+    background: rgba(231, 76, 60, 0.2);
+    color: var(--mf-danger);
+}
+
+/* Loading Animation */
+.spinner {
+    width: 40px;
+    height: 40px;
+    border: 4px solid var(--mf-dark-tertiary);
+    border-top-color: var(--mf-primary);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in {
+    animation: fadeIn 0.3s ease-in;
+}
+
+.slide-up {
+    animation: slideUp 0.3s ease-out;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    .btn {
+        padding: 0.625rem 1.25rem;
+        font-size: 0.95rem;
+    }
+}

@@ -1,13 +1,13 @@
 {
-  "name": "helioslauncher",
-  "version": "2.2.1",
-  "productName": "Helios Launcher",
-  "description": "Modded Minecraft Launcher",
-  "author": "Daniel Scalzi (https://github.com/dscalzi/)",
-  "license": "UNLICENSED",
-  "homepage": "https://github.com/dscalzi/HeliosLauncher",
+  "name": "makeforge-launcher",
+  "version": "1.0.0",
+  "productName": "MakeForge Launcher",
+  "description": "Modern Minecraft Launcher by MakeForge Studios",
+  "author": "Divine (MakeForge Studios)",
+  "license": "MIT",
+  "homepage": "https://github.com/viperxc24odmaker/MakeForgeModernLauncher",
   "bugs": {
-    "url": "https://github.com/dscalzi/HeliosLauncher/issues"
+    "url": "https://github.com/viperxc24odmaker/MakeForgeModernLauncher/issues"
   },
   "private": true,
   "main": "index.js",
@@ -37,7 +37,8 @@
     "jquery": "^3.7.1",
     "lodash.merge": "^4.6.2",
     "semver": "^7.7.3",
-    "toml": "^3.0.0"
+    "toml": "^3.0.0",
+    "uuid": "^9.0.1"
   },
   "devDependencies": {
     "@stylistic/eslint-plugin": "^5.6.1",
@@ -47,6 +48,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/dscalzi/HeliosLauncher.git"
+    "url": "git+https://github.com/viperxc24odmaker/MakeForgeModernLauncher.git"
   }
 }
