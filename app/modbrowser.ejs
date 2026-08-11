@@ -1,0 +1,156 @@
+<div id="modBrowserContainer" style="display: none;">
+    <div id="modBrowserContent">
+        <!-- Top Tabs -->
+        <div id="modBrowserTabs">
+            <button class="modTab modTabActive" data-type="mod">Mods</button>
+            <button class="modTab" data-type="resourcepack">Resource Packs</button>
+            <button class="modTab" data-type="datapack">Data Packs</button>
+            <button class="modTab" data-type="shader">Shaders</button>
+            <button class="modTab" data-type="modpack">Modpacks</button>
+            <button class="modTab" data-type="plugin">Plugins</button>
+        </div>
+
+        <div id="modBrowserMain">
+            <!-- Sidebar Filters -->
+            <div id="modBrowserSidebar">
+                <!-- Game Version -->
+                <div class="modFilterSection">
+                    <div class="modFilterHeader" data-collapse="versionFilter">
+                        <span>Game version</span>
+                        <span class="modFilterArrow">▾</span>
+                    </div>
+                    <div class="modFilterBody" id="versionFilter">
+                        <input type="text" class="modFilterSearch" id="versionSearch" placeholder="Search...">
+                        <div class="modFilterList" id="versionList">
+                            <!-- Populated by JS -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Loader -->
+                <div class="modFilterSection">
+                    <div class="modFilterHeader" data-collapse="loaderFilter">
+                        <span>Loader</span>
+                        <span class="modFilterArrow">▾</span>
+                    </div>
+                    <div class="modFilterBody" id="loaderFilter">
+                        <label class="modFilterCheck"><input type="checkbox" value="fabric"><span class="loaderIcon fabricIcon"></span> Fabric</label>
+                        <label class="modFilterCheck"><input type="checkbox" value="forge"><span class="loaderIcon forgeIcon"></span> Forge</label>
+                        <label class="modFilterCheck"><input type="checkbox" value="neoforge"><span class="loaderIcon neoforgeIcon"></span> NeoForge</label>
+                        <label class="modFilterCheck"><input type="checkbox" value="quilt"><span class="loaderIcon quiltIcon"></span> Quilt</label>
+                    </div>
+                </div>
+
+                <!-- Category -->
+                <div class="modFilterSection">
+                    <div class="modFilterHeader" data-collapse="categoryFilter">
+                        <span>Category</span>
+                        <span class="modFilterArrow">▾</span>
+                    </div>
+                    <div class="modFilterBody" id="categoryFilter">
+                        <label class="modFilterCheck"><input type="checkbox" value="adventure"> Adventure</label>
+                        <label class="modFilterCheck"><input type="checkbox" value="cursed"> Cursed</label>
+                        <label class="modFilterCheck"><input type="checkbox" value="decoration"> Decoration</label>
+                        <label class="modFilterCheck"><input type="checkbox" value="economy"> Economy</label>
+                        <label class="modFilterCheck"><input type="checkbox" value="equipment"> Equipment</label>
+                        <label class="modFilterCheck"><input type="checkbox" value="food"> Food</label>
+                        <label class="modFilterCheck"><input type="checkbox" value="game-mechanics"> Game Mechanics</label>
+                        <label class="modFilterCheck"><input type="checkbox" value="library"> Library</label>
+                        <label class="modFilterCheck"><input type="checkbox" value="magic"> Magic</label>
+                        <label class="modFilterCheck"><input type="checkbox" value="management"> Management</label>
+                        <label class="modFilterCheck"><input type="checkbox" value="minigame"> Minigame</label>
+                        <label class="modFilterCheck"><input type="checkbox" value="mobs"> Mobs</label>
+                        <label class="modFilterCheck"><input type="checkbox" value="optimization"> Optimization</label>
+                        <label class="modFilterCheck"><input type="checkbox" value="social"> Social</label>
+                        <label class="modFilterCheck"><input type="checkbox" value="storage"> Storage</label>
+                        <label class="modFilterCheck"><input type="checkbox" value="technology"> Technology</label>
+                        <label class="modFilterCheck"><input type="checkbox" value="transportation"> Transportation</label>
+                        <label class="modFilterCheck"><input type="checkbox" value="utility"> Utility</label>
+                        <label class="modFilterCheck"><input type="checkbox" value="world-generation"> World Generation</label>
+                    </div>
+                </div>
+
+                <!-- Environment -->
+                <div class="modFilterSection">
+                    <div class="modFilterHeader" data-collapse="envFilter">
+                        <span>Environment</span>
+                        <span class="modFilterArrow">▾</span>
+                    </div>
+                    <div class="modFilterBody" id="envFilter">
+                        <label class="modFilterCheck"><input type="checkbox" value="client"> Client</label>
+                        <label class="modFilterCheck"><input type="checkbox" value="server"> Server</label>
+                    </div>
+                </div>
+
+                <!-- License -->
+                <div class="modFilterSection">
+                    <div class="modFilterHeader" data-collapse="licenseFilter">
+                        <span>License</span>
+                        <span class="modFilterArrow">▾</span>
+                    </div>
+                    <div class="modFilterBody" id="licenseFilter">
+                        <label class="modFilterCheck"><input type="checkbox" value="open-source"> Open source</label>
+                    </div>
+                </div>
+
+                <!-- Advanced -->
+                <div class="modFilterSection">
+                    <div class="modFilterHeader" data-collapse="advancedFilter">
+                        <span>Advanced</span>
+                        <span class="modFilterArrow">▾</span>
+                    </div>
+                    <div class="modFilterBody" id="advancedFilter">
+                        <label class="modFilterCheck"><input type="checkbox" value="exclude-plugins"> Exclude plugins</label>
+                        <label class="modFilterCheck"><input type="checkbox" value="exclude-datapacks"> Exclude data packs</label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Main Content -->
+            <div id="modBrowserResults">
+                <!-- Search Bar -->
+                <div id="modSearchBar">
+                    <input type="text" id="modSearchInput" placeholder="Search mods...">
+                </div>
+
+                <!-- Sort/View Controls -->
+                <div id="modControls">
+                    <div id="modSortControl">
+                        <span>Sort by:</span>
+                        <select id="modSortSelect">
+                            <option value="relevance">Relevance</option>
+                            <option value="downloads">Downloads</option>
+                            <option value="follows">Follows</option>
+                            <option value="newest">Newest</option>
+                            <option value="updated">Updated</option>
+                        </select>
+                    </div>
+                    <div id="modViewControl">
+                        <span>View:</span>
+                        <select id="modViewSelect">
+                            <option value="20" selected>20</option>
+                            <option value="50">50</option>
+                            <option value="100">100</option>
+                        </select>
+                    </div>
+                    <div id="modPagination">
+                        <!-- Populated by JS -->
+                    </div>
+                </div>
+
+                <!-- Mod Cards List -->
+                <div id="modCardsList">
+                    <div id="modLoadingSpinner" style="display: none;">
+                        <div class="spinner"></div>
+                        <span>Searching mods...</span>
+                    </div>
+                    <div id="modNoResults" style="display: none;">
+                        <span>No mods found. Try different filters.</span>
+                    </div>
+                    <!-- Mod cards injected here by JS -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./assets/js/scripts/modbrowser.js"></script>
+</div>

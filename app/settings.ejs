@@ -286,6 +286,34 @@
                     </label>
                 </div>
             </div>
+            <!-- MakeForge: Offline Testing Mode -->
+            <div class="settingsFieldContainer">
+                <div class="settingsFieldLeft">
+                    <span class="settingsFieldTitle">Offline Testing Mode</span>
+                    <span class="settingsFieldDesc">Enable test accounts for development without Microsoft auth. Creates mock accounts for testing launcher features.</span>
+                </div>
+                <div class="settingsFieldRight">
+                    <label class="toggleSwitch">
+                        <input type="checkbox" id="offlineTestingToggle" cValue="OfflineTesting">
+                        <span class="toggleSwitchSlider"></span>
+                    </label>
+                </div>
+            </div>
+            <!-- MakeForge: Theme Switcher -->
+            <div class="settingsFieldContainer">
+                <div class="settingsFieldLeft">
+                    <span class="settingsFieldTitle">Launcher Theme</span>
+                    <span class="settingsFieldDesc">Choose a visual theme for the launcher.</span>
+                </div>
+                <div class="settingsFieldRight">
+                    <select id="themeSwitcher" style="background:rgba(0,0,0,0.4);border:1px solid rgba(255,255,255,0.15);color:#fff;padding:6px 10px;border-radius:4px;font-size:12px;">
+                        <option value="makeforge-default">MakeForge (Default)</option>
+                        <option value="dark-mode">Dark Mode</option>
+                        <option value="retro-pixel">Retro Pixel</option>
+                        <option value="forest-green">Forest Green</option>
+                    </select>
+                </div>
+            </div>
             <div class="settingsFileSelContainer">
                 <div class="settingsFileSelContent">
                     <div class="settingsFieldTitle" id="settingsDataDirTitle"><%- lang('settings.dataDirectoryTitle') %></div>
